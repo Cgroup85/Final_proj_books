@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quiz</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+            integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+            crossorigin="anonymous"></script>
+    <script src="../Scripts/ajaxCalls.js"></script>
+    <script type="importmap">
+        {
+          "imports": {
+            "@google/generative-ai": "https://esm.run/@google/generative-ai"
+          }
+        }
+    </script>
+    <link rel="stylesheet" type="text/css" href="../Style/quiz.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-links">
+
+            <button id="homeBtn">PLC Books</button>
+            <button id="highScores">High scores</button>
+            <input class="toggleBox" type="checkbox" id="toggle-mode" />
+            <label for="toggle-mode"></label>
+        </div>
+    </nav>
+    <h1>Riddle me this</h1>
+    <div id="startQuiz">
+        <span id="gameScore"></span>
+        <button id="startGame">Click to begin!</button>
+    </div>
+    <div id="scoresModal">
+        <div id="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+        </div>
+    </div>
+    <div id="quiz"></div>
+    <div id="finishQuiz">
+        <button id="finishGame">Click to finish!</button>
+    </div>
+    <footer>
+        <p>&copy; 2024 PLC. All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="../Scripts/quiz.js"></script>
+</body>
+</html>

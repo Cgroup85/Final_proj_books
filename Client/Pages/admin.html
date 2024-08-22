@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Admin</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+            integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+            crossorigin="anonymous"></script>
+    <script src="../Scripts/ajaxCalls.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../Style/admin.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-links">
+            <button id="homeBtn">PLC Books</button>
+            <button id="logoutBtn">Log out</button>
+
+            <button id="authorsBtn">Authors</button>
+
+            <input class="toggleBox" type="checkbox" id="toggle-mode" />
+            <label for="toggle-mode"></label>
+          </div>
+    </nav>
+    <h1>Admin panel</h1>
+    <form id="dataTableForm">
+        <h2>User controls</h2>
+        <input type="text" id="userSearch" placeholder="Search Users">
+        <table id="usersDataTable" class="display">
+            <thead></thead>
+            <tbody></tbody>
+        </table>
+    </form>
+    <form id="userLibrary">
+        <h2>User books</h2>
+        <table id="userBooks" class="display">
+            <thead></thead>
+            <tbody></tbody>
+        </table>
+    </form>
+    <form id="bookCount">
+        <h2>Books in libraries</h2>
+        <table id="bookCountTable" class="display">
+            <thead></thead>
+            <tbody></tbody>
+        </table>
+    </form>
+    <form id="authorsCount">
+        <h2>Authors in libraries</h2>
+        <table id="authorsCountTable" class="display">
+            <thead></thead>
+            <tbody></tbody>
+        </table>
+    </form>
+    <footer>
+        <p>&copy; 2024 PLC. All rights reserved.</p>
+    </footer>
+    <script src="../Scripts/admin.js"></script>
+</body>
+</html>

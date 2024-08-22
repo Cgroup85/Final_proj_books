@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Transfer Books</title>
+    <!-- Load jQuery from a CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <!-- Load custom scripts that depend on jQuery -->
+    <script src="../Scripts/ajaxCalls.js" defer></script>
+    <link href="../Style/purchaseRequests.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <nav>
+        <div class="nav-links">
+            <button id="homeBtn">PLC Books</button>
+            <button id="logoutBtn">Log out</button>
+            <button id="authorsBtn">Authors</button>
+            <button id="myBooksBtn">My Books</button>
+            <button id="wishlistBtn">🤍</button>
+            <button id="purchaseBooksBtn">Purchase Books from Users</button>
+            <button id="quizBtn">Quiz Game</button>
+            <input class="toggleBox" type="checkbox" id="toggle-mode" />
+            <label for="toggle-mode"></label>
+            </div>
+</nav>
+    <h1>Requests List</h1>
+    <div class="section" id="books-display">
+        <div id="requests-container"></div>
+    </div>
+    <script src="../Scripts/purchaseRequests.js"></script>
+</body>
+</html>

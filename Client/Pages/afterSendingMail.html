@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Forgot Password</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+            integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+            crossorigin="anonymous"></script>
+    <script src="../Scripts/ajaxCalls.js"></script>
+    <link rel="stylesheet" href="../Style/login.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-links">
+
+            <button id="homeBtn">PLC Books</button>
+            <input class="toggleBox" type="checkbox" id="toggle-mode" />
+            <label id ="toggle"for="toggle-mode"></label>
+            </div>
+    </nav>
+    <h1>Forgot Password</h1>
+    <p>A message with reset password link just dend to you..</p>
+    <form id="loginForm">        
+        <button id="resend-mail" type="submit">Resend Mail </button>
+        <button id="login">Login </button>
+    </form>
+
+    <footer>
+        <p>&copy; 2024 PLC. All rights reserved.</p>
+    </footer>
+    <script src="../Scripts/afterSendingMail.js"></script>
+
+</body>
+</html>

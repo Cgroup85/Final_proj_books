@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>My Books</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+            integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+            crossorigin="anonymous"></script>
+    <script src="../Scripts/ajaxCalls.js"></script>
+    <link href="../Style/myBooks.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <nav>
+        <div class="nav-links">
+
+            <button id="homeBtn">PLC Books</button>
+            <button id="loginBtn">Log in</button>
+            <button id="logoutBtn">Log out</button>
+            <button id="registerBtn">Sign up</button>
+            <button id="authorsBtn">Authors</button>
+            <button id="adminBtn">Admin</button>
+            <button id="wishlistBtn">🤍</button>
+            <button id="mypurchaserequestsBtn">My Purchase Requests</button>
+            <button id="purchaseBooksBtn">Purchase Books from Users</button>
+            <button id="quizBtn">Quiz Game</button>
+            <input class="toggleBox" type="checkbox" id="toggle-mode" />
+            <label for="toggle-mode"></label>
+            </div>
+    </nav>
+    <h1>My Library</h1>
+    <h2>Purchased Books</h2>
+
+    <div class="section" id="books-display">
+        <!-- Container for purchased books -->
+        <div id="books-container">
+            
+            <!-- Books with status "purchased" will be displayed here -->
+        </div>
+
+    <h2>Read Books</h2>
+        <!-- Container for read books -->
+        <div id="read-books-container">
+
+            <!-- Books with status "read" will be displayed here -->
+        </div>
+    </div>
+
+    <script src="../Scripts/mybooks.js"></script>
+</body>
+</html>

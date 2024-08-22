@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>My Books</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+            integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+            crossorigin="anonymous"></script>
+    <script src="../Scripts/ajaxCalls.js"></script>
+    <link href="../Style/wishlist.css" rel="stylesheet" />
+</head>
+<body>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <div class="nav-links">
+            <button id="homeBtn">PLC Books</button>
+            <button id="logoutBtn">Log out</button>
+            <button id="authorsBtn">Authors</button>
+            <button id="myBooksBtn">My Books</button>
+            <button id="purchaseBooksBtn">Purchase Books from Users</button>
+            <button id="mypurchaserequestsBtn">My Purchase Requests</button>
+            <button id="quizBtn">Quiz Game</button>
+            <button id="adminBtn">Admin</button>
+            <input class="toggleBox" type="checkbox" id="toggle-mode" />
+            <label for="toggle-mode"></label>
+            </div>
+    </nav>
+
+    <!-- Main Content -->
+    <h1>Wish List</h1>
+    <div class="section" id="books-display">
+        <div id="books-container"></div>
+    </div>
+    <script src="../Scripts/wishList.js"></script>
+</body>
+</html>

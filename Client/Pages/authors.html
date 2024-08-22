@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Authors</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+            integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+            crossorigin="anonymous"></script>
+    <script src="../Scripts/ajaxCalls.js"></script>
+    <link rel="stylesheet" href="../Style/authors.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-links">
+            <button id="homeBtn">PLC Books</button>
+            <button id="myBooksBtn">My Books</button>
+            <button id="wishlistBtn">🤍</button>
+            <button id="purchaseBooksBtn">Purchase Books from Users</button>
+            <button id="mypurchaserequestsBtn">My Purchase Requests</button>
+            <button id="quizBtn">Quiz Game</button>
+            <button id="loginBtn">Log in</button>
+            <button id="logoutBtn">Log out</button>
+            <button id="registerBtn">Sign up</button>
+            <button id="myBooksBtn">My Books</button>
+            <button id="wishlistBtn">🤍</button>
+            <button id="purchaseBooksBtn">Purchase Books from Users</button>
+            <button id="mypurchaserequestsBtn">My Purchase Requests</button>
+            <button id="quizBtn">Quiz Game</button>
+            <button id="adminBtn">Admin</button>
+            <input class="toggleBox" type="checkbox" id="toggle-mode" />
+            <label for="toggle-mode"></label>
+        </div>
+</nav>
+
+    <header>
+        <div id="authorsModal" class="modal">
+            <div id="modal-content">
+                <span class="close">&times;</span>
+            </div>
+        </div>
+        <h1>All Authors</h1>
+        <div id="search-container">
+            <input type="text" id="search-input" name="search" placeholder="Enter Author Name">
+            <button id="searchBtn">Search</button>
+        </div>
+    </header>
+    <div id="authors-container">
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 PLC. All rights reserved.</p>
+    </footer>
+
+    <script src="../Scripts/authors.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Additions</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+            integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+            crossorigin="anonymous"></script>
+    <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.1.81/pdf.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="../Scripts/ajaxCalls.js"></script>
+    <link rel="stylesheet" type="text/css" href="../Style/additions.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-links">
+
+            <button id="homeBtn">PLC Book</button>
+            <button id="loginBtn">Log in</button>
+            <button id="logoutBtn">Log out</button>
+            <button id="registerBtn">Sign up</button>
+            <button id="authorsBtn">Authors</button>
+            <button id="myBooksBtn">My Books</button>
+            <button id="wishlistBtn">🤍</button>
+            <button id="purchaseBooksBtn">Purchase Books from Users</button>
+            <button id="mypurchaserequestsBtn">My Purchase Requests</button>
+            <button id="quizBtn">Quiz Game</button>
+            <button id="adminBtn">Admin</button>
+            <input class="toggleBox" type="checkbox" id="toggle-mode" />
+            <label for="toggle-mode"></label>
+            </div>
+    </nav>
+    <h1>Our Additions</h1>
+
+    <ul dir="rtl">
+        <h3>שכחתי סיסמא: </h3>
+        <li>
+            כאשר משתמש רשום שכח את הסיסמא האישית שלו, יצרנו את האפשרות לחדש את הסיסמא בעזרת המייל של המשתמש הקיים במסד נתונים שלנו.
+            <br />
+            מימשנו את האפשרות על ידי יצירת כפתור "שכחתי סיסמא" ששולח את המשתמש לטופס עם שדה של אימייל על מנת לדעת למי לשלוח הודעה לחידוש סיסמא .
+            <br />
+            לאחר לחיצה על כפתור השליחה נשלחת בקשת "GET" כדי לבדוק האם המייל קיים במערכת ואם כן נשלחת הודעת דואר אלקטרוני למשתמש עם קישור לשינוי סיסמא.
+            <br />
+            הקישור שמגיע אל מייל המשתמש מוביל אותו לטופס שינוי סיסמא עם שדות לסיסמא חדשה ואימות סיסמא חדשה.
+            <br />
+            לאחר לחיצה על חידוש סיסמא נשלחת בקשת "PUT" עם הסיסמא החדשה לשרת והסיסמא מתעדכנת במסד הנתונים שלנו.
+            <br />
+            על מנת לממש את שליחת המייל למשתמש השתמשנו בחבילות MailKit ו MimeKit.
+            <br />
+        </li>
+        <br />
+        <h3>בקשת קניית ספר ממשתמש ותשובה לבקשה: </h3>
+        <li>
+            כאשר משתמש רוצה לרכוש ספר ממשתמש אחר הוא מבקש בקשת קניה ובפעולה זו המוכר מקבל הודעה למייל לגבי הבקשה, ממי הבקשה ולגבי איזה ספר.
+            <br />
+            בלחיצה על כפתור הבקשה בעמוד הספרים הניתנים לרכישה שיצרנו, נשלחת בקשת "POST" לשרת עם פרטי הבקשה והמוכר מקבל הודעת דואר אלקטרוני עם פרטי הבקשה.
+            <br />
+            לאחר שהמוכר מחליט האם למכור או לא למכור, מציע הבקשה מקבל הודעה למייל שלו עם החלטת המוכר לגבי הספר אותו רצה לקנות.
+            <br />
+            על מנת לממש את שליחת המייל למשתמש השתמשנו בחבילות MailKit ו MimeKit.
+            <br />
+        </li>
+        <br />
+        <h3>הוספת ניקוד במשחק:</h3>
+        <li>
+            לכל משתמש נשמר ניקוד במהלך המשחק, בכל שלב ניתן ללחוץ על כפתור "HIGHSCORE" ולראות את 5 השחקנים עם הניקוד הגבוהה ביותר
+            הניקוד מופיע על "MODAL" ובו טבלת ניקוד עם שמות השחקנים וניקוד הגבוהה ביותר שלהם.
+            <br />
+            בלחיצה על כפתור סיום משחק, מופיע שם משתמש והניקוד של השחקן, אם השחקן שיפר את הניקוד הכי גובה - תופיע הודעה מתאימה במודל.
+
+        </li>
+        <br />
+        <h3>אפשרות ניהול משתמשים בממשק מנהל:</h3>
+        <li>
+            בממשק המנהל ניתן לשנות פרטי משתמשים כמו: שם משתמש, כתובת מייל, סיסמא, סטטוס פעילות, סטטוס מנהל.
+            <br />חיפוש בטבלת משתמשים
+        </li>
+        <br />
+        
+        <h3>המלצה למשתמש על ספרים לפי הקטגוריות </h3>
+        <li>
+            זיהוי שלושת הקטגוריות שבהן המשתמש רכש הכי הרבה ספרים, על פי ה-UserID שניתן. והצגה של חמש ספרים מתוך אותן הקטגוריות שהמשתמש עדיין לא רכש, כהמלצה לרכישה.
+        </li>
+
+    </ul>
+
+    <script src="../Scripts/additions.js"></script>
+
+</body>
+</html>

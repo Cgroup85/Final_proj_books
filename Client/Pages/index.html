@@ -1,0 +1,87 @@
+﻿﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home Page</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+            integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+            crossorigin="anonymous"></script>
+    <script src="../Scripts/ajaxCalls.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="../Style/index.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">PLC Books</div>
+        <div class="nav-links">
+            <button id="authorsBtn">Authors</button>
+            <button id="myBooksBtn">My Books</button>
+            <button id="wishlistBtn">🤍</button>
+            <button id="purchaseBooksBtn">Purchase Books from Users</button>
+            <button id="mypurchaserequestsBtn">My Purchase Requests</button>
+            <button id="quizBtn">Quiz Game</button>
+            <button id="adminBtn">Admin</button>
+            <button id="additionsBtn">Additions</button>
+
+        </div>
+        <div class="nav-actions">
+            <button id="loginBtn">Log in</button>
+            <button id="logoutBtn">Log out</button>
+            <input class="toggleBox" type="checkbox" id="toggle-mode" />
+            <label for="toggle-mode"></label>
+            <button id="registerBtn">Sign up</button>
+
+            <span id="userWelcome"></span>
+        </div>
+    </nav>
+   <div id="search-container">
+    <input type="text" id="search-input" name="search" placeholder="Enter Book Name / Author Name / Words In Book ">
+    <button id="searchBtn">Search</button>
+</div>
+    <header>
+    </header>
+    
+
+    <div id="booksModal" class="modal">
+        <div id="modal-content">
+            <span class="close">&times;</span>
+        </div>
+    </div>
+    <div id="main-content">
+        <div id="best-seller-container">
+            <h2>Best Sellers</h2>
+        </div>
+        <div id="top-books-container">
+            <!-- Content for the top 5 most purchased books will be added here dynamically -->
+        </div>
+        <h2 id="recommendedBooksHeader">Recommended Books</h2>
+        <div id="recommended-books-container">
+            <!-- Content for the recommended books by category will be added here dynamically -->
+        </div>
+        <h2 id="bookCatalog">Books Catalog</h2>
+        <div class="carousel-container" id="books-container">
+            <button class="carousel-button left" id="carouselPrev">&lt;</button>
+            <div class="carousel"></div>
+            <button class="carousel-button right" id="carouselNext">&gt;</button>
+        </div>
+        <button id="allBooksBtn">See more books</button>
+        <h2 id="ebookCatalog">E-Books Catalog</h2>
+        <div class="ebook-carousel-container" id="ebooks-container">
+            <button class="ebook-carousel-button left" id="eBookCarouselPrev">&lt;</button>
+            <div class="eBookCarousel"></div>
+            <button class="ebook-carousel-button right" id="eBookCarouselNext">&gt;</button>
+        </div>
+        <button id="allEBooksBtn">See more ebooks</button>
+    </div>
+
+    <!--<button id="insertDataToDbBtn">Insert All Data</button>-->
+    <footer>
+        <p>&copy; 2024 PLC. All rights reserved.</p>
+    </footer>
+
+    <script src="../Scripts/index.js"></script>
+</body>
+</html>

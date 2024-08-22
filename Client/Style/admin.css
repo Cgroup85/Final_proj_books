@@ -1,0 +1,304 @@
+﻿
+:root {
+    --background-color: white;
+    --text-color: black;
+    --td-background-color: #f9f9f9;
+    --button-background-color: #3498db;
+    --modal--background-color: white;
+    --trOdd-background-color: #E9F2FF;
+    --trEven-background-color: #E7F9FF;
+    --input-background-color: white;
+}
+
+/* Dark mode overrides */
+body.dark-mode {
+    --background-color: black;
+    --text-color: white;
+    --td-background-color: #6f6f6f;
+    --button-background-color: #37474f;
+    --modal--background-color: darkgrey;
+    --trOdd-background-color: #22272B;
+    --trEven-background-color: #282E33;
+    --input-background-color: #BCD6F00A;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+    nav button {
+        margin: 20px;
+    }
+
+#toggle-mode {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px;
+}
+
+nav > label {
+    width: 50px;
+    height: 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px;
+    display: block;
+    background: lightgray;
+    border-radius: 20px;
+    box-shadow: inset 0px 2px 8px rgba(0,0,0,0.4), inset 0px -2px 8px rgba(255,255,255,0.4);
+    transition: 0.3s;
+}
+
+    nav > label:after {
+        content: "";
+        width: 18px;
+        height: 18px;
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        background: linear-gradient(180deg, #ffcc89, #d8860b);
+        border-radius: 18px;
+        box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
+        transition: 0.3s;
+    }
+
+nav > .toggleBox {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+    nav > .toggleBox:checked + label {
+        background: #242424;
+    }
+
+        nav > .toggleBox:checked + label:after {
+            left: 46px;
+            transform: translate(-100%);
+            background: linear-gradient(180deg, #777, #3a3a3a);
+        }
+
+nav > label:active:after {
+    width: 26px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+}
+
+#dataTableForm{
+    position: relative;
+    margin: auto;
+    width: 90%;
+}
+
+table > tbody > tr{
+    background-color: black;
+}
+
+button {
+    background-color: var(--button-background-color);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px; /* Add rounded corners to buttons */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    margin: 10px; /* Add space below buttons */
+}
+
+
+    button:hover {
+        opacity: 0.8; /* Make button slightly transparent on hover */
+    }
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+    nav .logo {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    nav .nav-links {
+        display: flex;
+        align-items: center;
+    }
+
+        nav .nav-links button {
+            background: none;
+            border: none;
+            color: var(--text-color);
+            font-size: 1em;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+
+        nav .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            padding: 0 15px;
+            font-size: 1em;
+        }
+
+            nav .nav-links a.active,
+            nav .nav-links a:hover {
+                text-decoration: underline;
+            }
+
+
+
+
+#homeBtn {
+    font-weight: bold;
+    font-size: 2em;
+}
+/*#userLibrary {
+    display:flex;
+    justify-content: center;
+}*/
+
+#userLibrary {
+    margin: auto;
+    margin-top: 100px;
+    width: 90%;
+}
+    /*#userBooks > tr > td, #userBooks > thead > tr > th {
+        padding: 20px;
+        border-radius: 50px;
+        border: 1px solid;
+        text-align: left;
+    }
+
+#bookCount {
+    display: flex;
+    justify-content: center;
+}*/
+
+#bookCount {
+    margin: auto;
+    margin-top: 100px;
+    width: 90%;
+}
+
+#authorsCount {
+    margin: auto;
+    margin-top: 100px;
+    width: 90%;
+}
+
+#userSearch {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+    /*#bookCountTable > tr > td, #userBooks > thead > tr > th {
+        padding: 20px;
+        border-radius: 50px;
+        border: 1px solid;
+        text-align: left;
+    }*/
+
+td > img {
+    width: 50px;
+}
+
+input{
+    background-color: var(--input-background-color);
+}
+
+/*#usersDataTable > tbody > tr.odd > .sorting_1 {
+    background-color: var(--trOdd-background-color);
+}
+
+#usersDataTable > tbody > tr.odd {
+    background-color: var(--trOdd-background-color);
+}
+
+#usersDataTable > tbody > tr.even > .sorting_1 {
+    background-color: var(--trEven-background-color);
+}
+
+#usersDataTable > tbody > tr.even {
+    background-color: var(--trEven-background-color);
+}
+
+#userBooks > tbody > tr.odd > .sorting_1 {
+    background-color: var(--trOdd-background-color);
+}
+
+#userBooks > tbody > tr.odd {
+    background-color: var(--trOdd-background-color);
+}
+
+#userBooks > tbody > tr.even > .sorting_1 {
+    background-color: var(--trEven-background-color);
+}
+
+#userBooks > tbody > tr.even {
+    background-color: var(--trEven-background-color);
+}
+
+#bookCountTable > tbody > tr.odd > .sorting_1 {
+    background-color: var(--trOdd-background-color);
+}
+
+#bookCountTable > tbody > tr.odd {
+    background-color: var(--trOdd-background-color);
+}
+
+#bookCountTable > tbody > tr.even > .sorting_1 {
+    background-color: var(--trEven-background-color);
+}
+
+#bookCountTable > tbody > tr.even {
+    background-color: var(--trEven-background-color);
+}
+
+#authorsCountTable > tbody > tr.odd > .sorting_1 {
+    background-color: var(--trOdd-background-color);
+}
+
+#authorsCountTable > tbody > tr.odd {
+    background-color: var(--trOdd-background-color);
+}
+
+#authorsCountTable > tbody > tr.even > .sorting_1 {
+    background-color: var(--trEven-background-color);
+}
+
+#authorsCountTable > tbody > tr.even {
+    background-color: var(--trEven-background-color);
+}*/
+
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: 200px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
